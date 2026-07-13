@@ -1,0 +1,26 @@
+rules:
+  - name: "All datasets must have owners"
+    filter:
+      platform: csv
+    conditions:
+      - property: hasOwner
+        expected: true
+    on_pass:
+      - action: add_tag
+        tag: "urn:li:tag:Compliant"
+    on_fail:
+      - action: add_tag
+        tag: "urn:li:tag:NeedsOwner"
+
+  - name: "All datasets must have a description"
+    filter:
+      platform: csv
+    conditions:
+      - property: hasDescription
+        expected: true
+    on_pass:
+      - action: add_tag
+        tag: "urn:li:tag:Compliant"
+    on_fail:
+      - action: add_tag
+        tag: "urn:li:tag:NeedsDescription"

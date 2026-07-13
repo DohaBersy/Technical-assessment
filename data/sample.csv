@@ -1,0 +1,7 @@
+table_name,description,owner,column_name,column_type
+customers,Customer master data,alice@company.com,customer_id,string
+customers,Customer master data,alice@company.com,email,string
+customers,Customer master data,alice@company.com,signup_date,date
+orders,Order transactions,bob@company.com,order_id,string
+orders,Order transactions,bob@company.com,customer_id,string
+orders,Order transactions,bob@company.com,amount,double
