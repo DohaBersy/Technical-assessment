@@ -123,11 +123,3 @@ mapping a property name string to a function that checks it. Two cases:
   ingestion CSV as its dataset list, rather than querying DataHub's
   search/browse API for "all datasets." A production version would use
   DataHub's search API to discover datasets dynamically.
-- **Rule filter matching** only supports filtering by `platform` today.
-  Extending to other fields (dataset name pattern, owner) would need a
-  small addition to `matches_filter`.
-- **No batching/concurrency** in ingestion or tagging — see the
-  "10,000 datasets" answer above.
-- **Ownership mapping** assumes the CSV's `owner` column is directly
-  usable as an identifier. A real system would resolve owners against
-  an existing user directory instead of building URNs from free text.
